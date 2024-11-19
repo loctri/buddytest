@@ -60,3 +60,6 @@ spec:
           envFrom:
             - configMapRef:
                 name: env-configmap
+      initContainers:
+        - name: run-migrations
+          image: public.ecr.aws/s0d3n4f3/buddy-dan
