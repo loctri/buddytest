@@ -1,0 +1,372 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Text Colors - Adjusted to be lighter */
+    --text-50: #ffffff;  /* Lightest */
+    --text-100: #f7f5f9;
+    --text-200: #efedf2;
+    --text-300: #e7e5eb;
+    --text-400: #dfdde4;
+    --text-500: #d7d5dd;
+    --text-600: #cfcdd6;
+    --text-700: #c7c5cf;
+    --text-800: #bfbdc8;
+    --text-900: #b7b5c1;
+    --text-950: #afadb9;
+
+    /* Background Colors - Kept dark */
+    --background: #07060d;
+    --background-100: #0d0b19;
+    --background-125: #141124;
+    --background-150: #1a172f;
+    --background-200: #211c3a;
+    --background-300: #282245;
+    --background-400: #302850;
+    --background-500: #372d5b;
+    --background-600: #3e3366;
+    --background-700: #453972;
+    --background-800: #4c3f7d;
+    --background-900: #534588;
+    --background-inverted: #ffffff;
+
+    /* Rest of the colors remain the same */
+    --background-emphasis: #1b1f27;
+    --background-strong: #1b1f27;
+
+    /* --border: #26222c; */
+    --border: #3e3a4a;
+    --border-light: #322e3b;
+    --border-medium: #3e3a4a;
+    --border-strong: #4a4659;
+    --border-dark: #565168;
+
+    --link: #4285f4;
+    --link-hover: #9b72cb;
+    --error: #990000;
+    --undo: #990000;
+    --success: #030706;
+    --light-success: #22c55e;
+    --alert: #f59e0b;
+    --accent: #7d2ae7;
+    --accent-hover: #9b72cb;
+
+    --black: #000000;
+    --white: #ffffff;
+
+    /* Code Syntax Highlighting - Adjusted for better contrast */
+    --code-text: #ffffff;
+    --token-comment: #a8c99e;
+    --token-punctuation: #e7e5eb;
+    --token-property: #b388ff;
+    --token-selector: #ff9da4;
+    --token-atrule: #c4a7eb;
+    --token-function: #fff7bc;
+    --token-regex: #7aa9ff;
+    --token-attr-name: #7aa9ff;
+
+    /* Other UI Elements - Adjusted for better contrast */
+    --non-selectable: #1b1f27;
+    --highlight-text:#350b6b;
+    --user-bubble: #1a172f;
+    --ai-bubble: #07060d;
+    --document-color: #ff647d;
+
+    /* Scrollbar Colors remain the same */
+    --scrollbar-track: #0b0613;
+    --scrollbar-thumb: #7a34f2;
+    --scrollbar-thumb-hover: #9b72cb;
+    --scrollbar-dark-thumb: #7a34f2;
+    --scrollbar-dark-thumb-hover: #9b72cb;
+
+    /* Tremor Colors - Adjusted for better contrast */
+    --tremor-brand-faint: #07060d;
+    --tremor-brand-muted: #0d0b19;
+    --tremor-brand-subtle: #1a172f;
+    --tremor-brand-emphasis: #b388ff;
+    --tremor-brand-inverted: #ffffff;
+    --tremor-background-muted: #07060d;
+    --tremor-background-subtle: #0d0b19;
+    --tremor-background-emphasis: #ffffff;
+    --tremor-content-subtle: #e7e5eb;
+    --tremor-content-default: #ffffff;
+    --tremor-content-emphasis: #ffffff;
+    --tremor-content-strong: #ffffff;
+    --tremor-content-inverted: #000000;
+
+    /* Dark Tremor Colors - Adjusted for better contrast */
+    --dark-tremor-brand-faint: #ffffff;
+    --dark-tremor-brand-muted: #f7f5f9;
+    --dark-tremor-brand-subtle: #b388ff;
+    --dark-tremor-brand-emphasis: #b388ff;
+    --dark-tremor-brand-inverted: #07060d;
+    --dark-tremor-background-muted: #07060d;
+    --dark-tremor-background-subtle: #0d0b19;
+    --dark-tremor-background-default: #07060d;
+    --dark-tremor-background-emphasis: #ffffff;
+    --dark-tremor-content-subtle: #e7e5eb;
+    --dark-tremor-content-default: #ffffff;
+    --dark-tremor-content-emphasis: #ffffff;
+    --dark-tremor-content-strong: #ffffff;
+    --dark-tremor-content-inverted: #000000;
+  }
+}
+
+/* Rest of the CSS remains the same */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Scrollbar Styles */
+.include-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.include-scrollbar::-webkit-scrollbar-track {
+  background: #0b0613;
+}
+
+.include-scrollbar::-webkit-scrollbar-thumb {
+  background: #7a34f2;
+  border-radius: 4px;
+}
+
+.include-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9b72cb;
+}
+
+.include-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #7a34f2 transparent;
+}
+
+/* Input Scrollbar */
+.inputscroll::-webkit-scrollbar-track {
+  background: #26222c;
+  scrollbar-width: none;
+}
+
+/* General Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: #7a34f2;
+  border-radius: 10px;
+}
+
+/* Scrollbar Handle Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9b72cb;
+}
+
+/* Dark Scrollbar Thumb */
+.dark-scrollbar::-webkit-scrollbar-thumb {
+  background: #7a34f2;
+  border-radius: 10px;
+}
+
+/* Dark Scrollbar Thumb Hover */
+.dark-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9b72cb;
+}
+
+/* Scrollbar Dimensions */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 8px;
+}
+
+/* Preserve Lines */
+.preserve-lines {
+  white-space: pre-wrap;
+}
+
+/* Loading Text Animation */
+.loading-text {
+  display: inline-block;
+  color: #ffffff;
+  background: linear-gradient(
+          -90deg,
+          #dfdde4 0%,
+          #07060d 5%,
+          #dfdde4 10%,
+          #dfdde4 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerTransition 1.5s ease-out infinite;
+}
+
+@keyframes shimmerTransition {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* Rest of the styles remain the same */
+.collapsible {
+  max-height: 300px;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.collapsible-closed {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.prevent-scroll {
+  overscroll-behavior-y: none;
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
+.prose :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  background-color: #1b1f27;
+  font-size: 0.875rem;
+  color: var(--text-600);
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+  color: #ffffff;
+}
+
+/* Token Styles - Adjusted for better contrast */
+.code-line .token.comment,
+.code-line .token.prolog,
+.code-line .token.doctype,
+.code-line .token.cdata {
+  color: #a8c99e;
+}
+
+.code-line .token.punctuation,
+.code-line .token.operator,
+.code-line .token.entity,
+.code-line .token.url,
+.code-line .language-css .token.string,
+.code-line .style .token.string {
+  color: #e7e5eb;
+}
+
+.code-line .token.property,
+.code-line .token.tag,
+.code-line .token.boolean,
+.code-line .token.number,
+.code-line .token.constant,
+.code-line .token.symbol,
+.code-line .token.deleted,
+.code-line .token.tag .token.punctuation {
+  color: #b388ff;
+}
+
+.code-line .token.selector,
+.code-line .token.attr-name,
+.code-line .token.string,
+.code-line .token.char,
+.code-line .token.builtin,
+.code-line .token.inserted,
+.code-line .token.attr-value,
+.code-line .token.attr-value .token.punctuation {
+  color: #ff9da4;
+}
+
+.code-line .token.atrule,
+.code-line .token.keyword {
+  color: #c4a7eb;
+}
+
+.code-line .token.function,
+.code-line .token.class-name {
+  color: #fff7bc;
+}
+
+.code-line .token.regex,
+.code-line .token.important,
+.code-line .token.variable {
+  color: #7aa9ff;
+}
+
+.code-line .token.important,
+.code-line .token.bold {
+  font-weight: bold;
+}
+
+.code-line .token.italic {
+  font-style: italic;
+}
+
+.code-line .token.entity {
+  cursor: help;
+}
+
+.code-line .token.attr-name {
+  color: #7aa9ff;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+/* List Styles */
+ol > li > p,
+ul > li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline;
+}
+
+/* List Item Text Color
+li {
+  color: var(--text-600);
+} */
+
+  /* Apply default text color to all text elements */
+body, h1, h2, h3, h4, h5, h6, p, span, strong, em, blockquote, li, a {
+  color: var(--text-600);
+}
+
+
+/* Disable focus styles universally */
+*:focus, *:hover, *:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Specifically target form elements */
+/* button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+} */
+
+/* Optionally disable hover styles */
+*:hover {
+  border-color: #3e3a4a;
+}
